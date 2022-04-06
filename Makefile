@@ -3,7 +3,10 @@
 	delete-kind-cluster
 
 create-kind-cluster:
-	$(CURDIR)/deployments/kind/create-kind-cluster.sh
+	$(CURDIR)/deployments/infra/kind/create-kind-cluster.sh
 
 delete-kind-cluster:
-	$(CURDIR)/deployments/kind/delete-kind-cluster.sh
+	$(CURDIR)/deployments/infra/kind/delete-kind-cluster.sh
+
+init-kn:
+	$(CURDIR)/deployments/infra/knative/init-knative.sh
